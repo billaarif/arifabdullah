@@ -1,11 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.querySelector('.hamburger')
-  const navLinks = document.querySelector('.nav-links')
+const menuToggle = document.getElementById('menuToggle')
+const navMenu = document.getElementById('navMenu')
 
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active')
-      hamburger.classList.toggle('open')
-    })
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('open')
+})
+
+document.addEventListener('click', e => {
+  if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+    navMenu.classList.remove('open')
   }
 })

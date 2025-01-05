@@ -1,104 +1,209 @@
-/* General Styles */
-body,
-html {
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
 
-/* Navbar Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background-color: #333;
-  color: #fff;
-  position: relative;
-  z-index: 1000;
-}
-
-.navbar .logo a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.5rem;
-}
-
-.navbar .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-  position: fixed;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
   top: 0;
-  right: -100%;
-  height: 100%;
-  width: 300px;
-  background-color: #333;
+  z-index: 2;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.navbar .menu li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.navbar .menu li a:hover {
+  color: gold;
+}
+
+.navbar .btn-appointment {
+  padding: 0.5rem 1rem;
+  background: gold;
+  border: none;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.navbar .btn-appointment:hover {
+  background: orange;
+}
+
+.hamburger {
+  display: none;
   flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+.menu.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  transform: translateX(0);
+}
+
+.menu {
+  transform: translateX(-100%);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 2s ease;
+}
+
+.hero-content p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  animation: fadeIn 2.5s ease;
+}
+
+.hero-content .rating {
+  display: flex;
   justify-content: center;
   align-items: center;
-  transition: right 0.3s ease-in-out;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 3s ease;
 }
 
-.navbar .nav-links.active {
-  right: 0;
-}
-
-.navbar .nav-links a {
-  color: #fff;
+.hero-content .btn-quote {
+  padding: 0.75rem 1.5rem;
+  background: gold;
+  color: black;
   text-decoration: none;
-  font-size: 1.2rem;
-  padding: 0.5rem;
-}
-
-.navbar .dropdown-menu {
-  display: none;
-  position: relative;
-  background-color: #444;
-  list-style: none;
-  padding: 0.5rem;
+  font-weight: bold;
   border-radius: 5px;
-  margin-top: 0.5rem;
+  transition: background 0.3s;
+  animation: fadeIn 3.5s ease;
 }
 
-.navbar .dropdown:hover .dropdown-menu {
-  display: block;
+.hero-content .btn-quote:hover {
+  background: orange;
 }
 
-.navbar .hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 0.3rem;
-  cursor: pointer;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.navbar .hamburger span {
-  background-color: #fff;
-  height: 2px;
-  width: 25px;
-  transition: all 0.3s ease;
-}
-
-.navbar .hamburger.open span:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
-}
-
-.navbar .hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.navbar .hamburger.open span:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-  .navbar .nav-links {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hamburger {
     display: flex;
   }
 
-  .navbar .hamburger {
-    display: flex;
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .navbar .btn-appointment {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .hero-content .btn-quote {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
   }
 }

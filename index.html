@@ -3,40 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Navbar</title>
+    <title>Responsive Header</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Navigation Bar -->
-    <header>
-      <nav class="navbar">
-        <div class="logo"><a href="#">BrandName</a></div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li class="dropdown">
-            <a href="#services">Services</a>
-            <ul class="dropdown-menu">
-              <li><a href="#web">Web Development</a></li>
-              <li><a href="#design">UI/UX Design</a></li>
-              <li><a href="#seo">SEO</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </header>
-    <dialog>
-      <div>
-        <h1><h3>fijrijfv hrje jdx dxsk</h3></h1>
-      </div>
-    </dialog>
+    <header class="hero">
+      <video autoplay loop muted>
+        <source src="background-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-    <script src="main.js"></script>
+      <nav class="navbar">
+        <div class="logo">VAYALIS</div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="menu">
+          <li><a href="#welcome">Welcome</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#rates">Rates</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+        <a href="#appointment" class="btn-appointment">Make an appointment</a>
+      </nav>
+
+      <div class="hero-content">
+        <h1>Boost your online business with Vayalis!</h1>
+        <p>
+          Explode your number of visitors, increase your sales, and give your
+          brand memorable notoriety that will take you to the top!
+        </p>
+        <div class="rating">
+          <img src="stars.png" alt="100% satisfied customers" />
+          <span>100% satisfied customers</span>
+        </div>
+        <a href="#quote" class="btn-quote">Request a free quote</a>
+      </div>
+    </header>
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector('.menu')
+        menu.classList.toggle('active')
+      }
+    </script>
   </body>
 </html>
