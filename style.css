@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: 'Cardo';
+}
+header {
+  background-color: #0d0d0d;
+}
+.common-container {
+  max-width: 1350px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.header-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Logo style */
+.site-logo img {
+  max-width: 230px;
+}
+/* Menu Item */
+
+.menu-item-list {
+}
+.menu-item-list ul {
+  display: flex;
+  gap: 30px;
+}
+.menu-item-list ul li a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+}
+/* Hamburger menu Icon style */
+.menu-icon-box {
+  height: 50px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 3px;
+  background-color: rgb(29, 29, 29);
+}
+/* .resoncive-icon-box {
+  display: none;
+} */
+.menu-icon {
+  margin: 5px 0;
+  height: 1px;
+  width: 40px;
+  background-color: #ffffff;
+}
