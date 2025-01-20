@@ -5,49 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Header</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responcive.css" />
   </head>
   <body>
-    <header class="hero">
-      <video autoplay loop muted>
-        <source src="background-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <nav class="navbar">
-        <div class="logo">VAYALIS</div>
-        <div class="hamburger" onclick="toggleMenu()">
-          <div></div>
-          <div></div>
-          <div></div>
+    <header>
+      <div class="common-container">
+        <!-- //Logo Container -->
+        <div class="site-logo">
+          <a href="#">
+            <img src="./images/logo.png" alt="Arif Logo" />
+          </a>
         </div>
-        <ul class="menu">
-          <li><a href="#welcome">Welcome</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#achievements">Achievements</a></li>
-          <li><a href="#rates">Rates</a></li>
-          <li><a href="#blog">Blog</a></li>
-        </ul>
-        <a href="#appointment" class="btn-appointment">Make an appointment</a>
-      </nav>
-
-      <div class="hero-content">
-        <h1>Boost your online business with Vayalis!</h1>
-        <p>
-          Explode your number of visitors, increase your sales, and give your
-          brand memorable notoriety that will take you to the top!
-        </p>
-        <div class="rating">
-          <img src="stars.png" alt="100% satisfied customers" />
-          <span>100% satisfied customers</span>
+        <!-- Menu Item List -->
+        <div class="menu-item-list">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
-        <a href="#quote" class="btn-quote">Request a free quote</a>
+        <!-- Hamburger menu Icon -->
+        <div class="menu-icon-box">
+          <div class="menu-icon icon-1"></div>
+          <div class="menu-icon icon-2"></div>
+          <div class="menu-icon icon-3"></div>
+        </div>
       </div>
     </header>
-    <script>
-      function toggleMenu() {
-        const menu = document.querySelector('.menu')
-        menu.classList.toggle('active')
-      }
-    </script>
   </body>
 </html>
