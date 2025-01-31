@@ -6,35 +6,103 @@
     <title>Arif Abdullah</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responcive.css" />
-    <style></style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
     <header>
-      <div class="common-container header-section">
-        <!-- //Logo Container -->
-        <div class="site-logo">
-          <a href="#">
-            <img src="./images/logo.png" alt="Arif Logo" />
+      <nav>
+        <div class="nav-container">
+          <a href="#" class="logo">
+            <img src="images/logo.png" alt="logo" />
           </a>
-        </div>
-        <!-- Menu Item List -->
-        <div class="menu-item-list">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+          <ul class="nav-links">
+            <li><a href="#">Experience</a></li>
             <li><a href="#">Projects</a></li>
-            <!-- <li><a href="#">Work</a></li> for the future -->
-            <li><a href="#">Blog</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
+          <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-        <!-- Hamburger menu Icon -->
-        <div class="menu-icon-box resoncive-icon-box">
-          <div class="icon-1 menu-icon"></div>
-          <div class="icon-2 menu-icon"></div>
-          <div class="icon-3 menu-icon"></div>
-        </div>
-      </div>
+      </nav>
     </header>
+    <main class="global-container-size home-page-main">
+      <section class="hero-section">
+        <div class="hero-text-col">
+          <p>
+            Hi There
+            <span>
+              <i class="fa-solid fa-hands-clapping fa-fade"></i>
+            </span>
+          </p>
+          <h1>I'm Arif Abdullah</h1>
+          <p class="description-text">
+            <h3>Web Application </h3>
+            I'm a Full Stack Developer. I love to build web applications and
+            solve problems. I'm passionate about learning new technologies and
+            sharing my knowledge with others.
+          </p>
+          <button class="magic-button">
+            Add Text
+        </button>
+        </div>
+        <div class="hero-image-col">
+          <img src="images/hero-image.png" alt="hero-image" />
+        </div>
+      </section>
+    </main>
+    <footer class="innovative-footer">
+      <div class="footer-grid">
+          <!-- Column 1: Navigation -->
+          <div class="footer-col footer-col-1">
+              <h3 class="footer-title pulse">Explore</h3>
+              <ul class="footer-nav">
+                  <li><a href="#" class="hover-underline">Home</a></li>
+                  <li><a href="#" class="hover-underline">Projects</a></li>
+                  <li><a href="#" class="hover-underline">Blog</a></li>
+                  <li><a href="#" class="hover-underline">Achievements</a></li>
+              </ul>
+          </div>
+  
+          <!-- Column 2: Skills -->
+          <div class="footer-col footer-col-2">
+              <h3 class="footer-title pulse">Expertise</h3>
+              <ul class="skill-tags">
+                  <li>Web Development</li>
+                  <li>#</li>
+                  <li>#</li>
+                  <li>#</li>
+              </ul>
+          </div>
+  
+          <!-- Column 3: Contact -->
+          <div class="footer-col footer-col-3">
+              <h3 class="footer-title pulse">Connect</h3>
+              <div class="contact-info">
+                  <a href="mailto:hello@arifabdullah.com" class="email-link">
+                      <i class="fas fa-paper-plane"></i>
+                      arifabdullah212@gmail.com
+                  </a>
+                  <div class="social-ring">
+                      <a href="#" class="social-circle"><i class="fab fa-github"></i></a>
+                      <a href="#" class="social-circle"><i class="fab fa-linkedin"></i></a>
+                      <a href="#" class="social-circle"><i class="fab fa-twitter"></i></i></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <div class="footer-crescent">
+          <div class="copyright">
+              <p>Crafted with <!-- <i class="fas fa-heartbeat"></i> --> by Arif Abdullah</p>
+              <p><i class="fa-regular fa-copyright fa-beat-fade"></i></i> 2024 All rights reserved</p>
+          </div>
+      </div>
+  </footer>
+    <script src="main.js"></script>
   </body>
 </html>
